@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Welcome to HH Bakery!</h2>
-        {% if 'username' in session %}
-            <p>Hello, {{ session['username'] }}!</p>
-            <p><a href="/logout" class="button">Logout</a></p>
-        {% else %}
-            <p>Please <a href="/login" class="button">login</a> or <a href="/register" class="button">register</a> to access the content.</p>
-        {% endif %}
+    <div class="navbar">
+        <a href="/">Trang Chủ</a>
+        <a href="/register">Đăng Ký</a>
+        <a href="/login">Đăng Nhập</a>
     </div>
+    <h2>Chào mừng đến HH Bakery!</h2>
 </body>
 </html>

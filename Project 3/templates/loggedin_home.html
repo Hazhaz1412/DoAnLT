@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HH Bakery</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#">Trang Chủ</a>
+        </div>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <button onclick="myFunction()" id="userButton" class="dropbtn">Chào, {{ session['username'] }}</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/logout">Đăng Xuất</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Chào mừng đến HH Bakery!</h1>
+    </main>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>

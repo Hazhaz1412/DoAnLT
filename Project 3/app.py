@@ -2,14 +2,16 @@ from flask import Flask, render_template, request, redirect, session
 import pyodbc
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
-
-# Kết nối đến cơ sở dữ liệu
-conn = pyodbc.connect('DRIVER={SQL Server};SERVER=LAPTOP-IA1SF1L6\\HUANPC;DATABASE=Bakery')
+app.secret_key = 'IKA@MCt14$243*&r2da#'
+                                         #(Change this to suitable)
+conn = pyodbc.connect('DRIVER={SQL Server};SERVER=LAPTOP-IA1SF1L6\HUANPC;DATABASE=Bakery')
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    if 'username' in session:
+        return render_template('loggedin_home.html')
+    else:
+        return render_template('index.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
