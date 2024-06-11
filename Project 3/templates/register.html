@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST">
+            <div class="input-wrapper">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <div class="input-led"></div>
+            </div>
+            <div class="input-wrapper">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="input-led"></div>
+            </div>
+            <div class="input-wrapper">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+                <div class="input-led"></div>
+            </div>
+            <div class="input-wrapper">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="input-led"></div>
+            </div>
+            <button type="submit" class="button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
